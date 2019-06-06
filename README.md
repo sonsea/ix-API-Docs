@@ -3,6 +3,11 @@ IX API为用户提供了一套简单而强大的开发工具，帮助用户将�
 
 ## 币币交易API
 [trade_api.md](./trade_api.md)
+<p>
+主域名: api.ix.com
+备用域名: api.ixex.io
+</p>
+
 
 ## 合约交易API
 [future_api.md](./future_api.md)
