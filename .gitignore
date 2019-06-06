@@ -1,0 +1,4 @@
+logs
+config.php
+*.pid
+.idea
