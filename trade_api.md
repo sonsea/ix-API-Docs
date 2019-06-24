@@ -5,9 +5,10 @@
 - 所有交易API请求都使用HTTP POST
 - 交易API需要在官网申请API需要的key/secret
 - 请求的header里添加version = '2.0'
+- ixx平台请求的header里添加from = 'ixx'
 - 请求的header里添加key/sign，sign=hash('sha256', $post_data.$secret)
 - 请求的nonce参数为当前系统时间戳，单位为秒，nonce不早/晚于当前系统时间10秒
-- 访问频率最快为100ms间隔
+- 单个接口访问频率最快为100ms间隔
 
 ## 开启API权限
 
