@@ -72,7 +72,7 @@ URI：**/v1/market/pairs**
 请求方式：**GET**
 请求示例：
 ``` text
-curl https://q.ix.com/v1/market/pairs
+curl https://q.ixex.io/v1/market/pairs
 ```
 
 响应示例：
@@ -113,7 +113,7 @@ URI：**/v1/market/histories?period={period}&pairs={pairs}**
 请求示例：
 不传递**pairs**参数
 ``` text
-curl https://q.ix.com/v1/market/histories?period=1d
+curl https://q.ixex.io/v1/market/histories?period=1d
 ```
 
 响应示例：
@@ -218,7 +218,7 @@ curl https://q.ix.com/v1/market/histories?period=1d
 请求示例：
 传递**pairs**参数，并传递一个不存在的交易对
 ``` text
-curl https://q.ix.com/v1/market/history?pairs=ETH_BTC,EOS_BTC,UNKNOWN&period=1d
+curl https://q.ixex.io/v1/market/history?pairs=ETH_BTC,EOS_BTC,UNKNOWN&period=1d
 ```
 
 响应示例：
@@ -272,7 +272,7 @@ URI：**/v1/market/tickers**
 请求示例：
 不传递**pair**参数
 ``` text
-curl https://q.ix.com/v1/market/tickers
+curl https://q.ixex.io/v1/market/tickers
 ```
 
 响应示例：
@@ -377,7 +377,7 @@ curl https://q.ix.com/v1/market/tickers
 请求示例：
 传递**pair**参数，并传递一个不存在的交易对
 ``` text
-curl https://q.ix.com/v1/market/tickers?pairs=ETH_BTC,EOS_BTC,UNKNOWN
+curl https://q.ixex.io/v1/market/tickers?pairs=ETH_BTC,EOS_BTC,UNKNOWN
 ```
 
 响应示例：
@@ -431,7 +431,7 @@ URI：**/v1/ticker/{pair}**
 
 请求示例：
 ``` text
-curl https://q.ix.com/v1/ticker/EOS_ETH
+curl https://q.ixex.io/v1/ticker/EOS_ETH
 ```
 
 响应示例：
@@ -481,7 +481,7 @@ URI：**/v1/history/{pair}?period={period}&size={size}**
 
 请求示例：
 ``` text
-curl https://q.ix.com/v1/history/EOS_ETH?period=1m&size=5
+curl https://q.ixex.io/v1/history/EOS_ETH?period=1m&size=5
 ```
 
 响应示例：
@@ -593,7 +593,7 @@ URI：**/v1/history/millis/{pair}?period={period}&begin={begin}&end={end}**
 
 请求示例：
 ``` text
-curl https://q.ix.com/v1/history/millis/EOS_ETH?period=1d&begin=1528992000000&end=1529769600000
+curl https://q.ixex.io/v1/history/millis/EOS_ETH?period=1d&begin=1528992000000&end=1529769600000
 ```
 
 响应示例：
@@ -753,7 +753,7 @@ URI：**/v1/deal/{pair}?size={size}**
 
 请求示例：
 ``` text
-curl https://q.ix.com/v1/deal/EOS_ETH?size=2
+curl https://q.ixex.io/v1/deal/EOS_ETH?size=2
 ```
 
 响应示例：
@@ -821,7 +821,7 @@ URI：**/v1/orderbook/{pair}?offset={offset}&accuracy={accuracy}&size={size}**
 
 请求示例
 ``` text
-curl https://q.ix.com/v1/orderbook/EOS_ETH?offset=0&accuracy=1&size=5
+curl https://q.ixex.io/v1/orderbook/EOS_ETH?offset=0&accuracy=1&size=5
 ```
 
 响应示例：
@@ -904,7 +904,7 @@ URI：**/v1/time**
 请求参数：无
 请求示例：
 ``` text
-curl https://q.ix.com/v1/time
+curl https://q.ixex.io/v1/time
 ```
 响应示例：
 ``` javascript

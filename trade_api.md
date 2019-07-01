@@ -27,7 +27,7 @@ from urllib import parse
 
 key = 'your key'
 secret = 'your secret'
-url = "https://api.ix.com/order/active"
+url = "https://api.ixex.io/order/active"
 symbol = 'BTC_USDT'
 nonce = int(time.time())
 payload = {'nonce': nonce, 'symbol': symbol, 'page': 1, 'size': 10}
@@ -41,7 +41,7 @@ PHP：
 ``` PHP
 $key = 'your key'
 $secret = 'your secret'
-$url = "https://api.ix.com/order/active";
+$url = "https://api.ixex.io/order/active";
 $symbol = 'BTC_USDT';
 $nonce = time();
 $payload = ['nonce' => $nonce, 'symbol' => $symbol, 'page' => 1, 'size' => 10];
@@ -55,7 +55,7 @@ JavaScript：
 ``` JavaScript
 let key = 'your key'
 let secret = 'your secret'
-let url = "https://api.ix.com/order/active"
+let url = "https://api.ixex.io/order/active"
 let symbol = 'BTC_USDT'
 let nonce = Math.floor(Date.now() / 1000)
 let sign = sha256("nonce="+ nonce + "&symbol=" + symbol + "&page=" + 1 + "&size=" + 10 + secret)
@@ -116,7 +116,7 @@ $.ajax({
   - state 状态 1上线 2下线
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/symbol/list -d 'nonce=1536826456'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/symbol/list -d 'nonce=1536826456'
 ```
 
 ## 获取余额列表 POST /balance/list
@@ -137,7 +137,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/s
   - rates 币种对各法币汇率 
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/balance/list -d 'nonce=1536826456'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/balance/list -d 'nonce=1536826456'
 ```
 
 ## 下单 POST /order/create
@@ -164,7 +164,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/b
   - locked 市价买时的锁定额
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/order/create -d 'nonce=1536826456&symbol=BTC_USDT&side=1&type=1&price=6000&amount=1'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/order/create -d 'nonce=1536826456&symbol=BTC_USDT&side=1&type=1&price=6000&amount=1'
 ```
 
 ## 撤单 POST /order/remove
@@ -178,7 +178,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/o
   - message
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/order/remove -d 'nonce=1536826456&symbol=BTC_USDT&order_id=123'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/order/remove -d 'nonce=1536826456&symbol=BTC_USDT&order_id=123'
 ```
 
 ## 查询委托 POST /order/active
@@ -210,7 +210,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/o
   - update_time 最近成交时间
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/order/active -d 'nonce=1536826456&symbol=BTC_USDT&page=1&size=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/order/active -d 'nonce=1536826456&symbol=BTC_USDT&page=1&size=10'
 ```
 
 ## 历史订单 POST /order/history
@@ -241,7 +241,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/o
   - create_time 下单时间
   - update_time 最近成交时间
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/order/history -d 'nonce=1536826456&page=1&size=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/order/history -d 'nonce=1536826456&page=1&size=10'
 ```
 
 ### 查询活跃委托订单详情 POST /order/query
@@ -272,5 +272,5 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/o
   - create_time 下单时间
   - update_time 最近成交时间
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/order/query -d 'nonce=1536826456&symbol=BTC_USDT&order_id=123'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/order/query -d 'nonce=1536826456&symbol=BTC_USDT&order_id=123'
 ```

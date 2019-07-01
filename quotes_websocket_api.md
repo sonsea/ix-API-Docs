@@ -5,14 +5,14 @@
 以**Beta**环境为例，使用WebSocket连接 **/v1/ticker/EOS_ETH** 频道，例如：
 
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/ticker/EOS_ETH");
+var socket = new WebSocket("wss://ws.ixex.io/v1/ticker/EOS_ETH");
 ```
 
 客户端请求为：
 
 ``` text
-GET wss://ws.ix.com/v1/ticker/EOS_ETH HTTP/1.1
-Host: ws.ix.com
+GET wss://ws.ixex.io/v1/ticker/EOS_ETH HTTP/1.1
+Host: ws.ixex.io
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
@@ -37,13 +37,13 @@ Sec-WebSocket-Accept: ip3WBDpEnyzPMRPngEgDZgM+6lU=
 如果连接不存在的频道，服务器会响应HTTP 404状态码，例如：
 
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/unknown");
+var socket = new WebSocket("wss://ws.ixex.io/v1/unknown");
 ```
 
 客户端请求为：
 ``` text
-GET wss://ws.ix.com/v1/unknown HTTP/1.1
-Host: ws.ix.com
+GET wss://ws.ixex.io/v1/unknown HTTP/1.1
+Host: ws.ixex.io
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
@@ -67,13 +67,13 @@ Content-Encoding: gzip
 
 如果连接的频道存在，但参数错误，例如交易对不存在，服务器响应后会主动断开连接，例如：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/ticker/EOS");
+var socket = new WebSocket("wss://ws.ixex.io/v1/ticker/EOS");
 ```
 
 客户端请求为：
 ``` text
-GET wss://ws.ix.com/v1/ticker/EOS HTTP/1.1
-Host: ws.ix.com
+GET wss://ws.ixex.io/v1/ticker/EOS HTTP/1.1
+Host: ws.ixex.io
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
@@ -131,7 +131,7 @@ URI：**/v1/market/histories/{period}**
 
 连接示例：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/market/histories/1d");
+var socket = new WebSocket("wss://ws.ixex.io/v1/market/histories/1d");
 ```
 
 推送示例：
@@ -238,7 +238,7 @@ URI：**/v1/market/tickers**
 
 连接示例：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/market/tickers");
+var socket = new WebSocket("wss://ws.ixex.io/v1/market/tickers");
 ```
 
 推送示例：
@@ -351,7 +351,7 @@ URI：**/v1/ticker/{pair}**
 
 连接示例：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/ticker/EOS_ETH");
+var socket = new WebSocket("wss://ws.ixex.io/v1/ticker/EOS_ETH");
 ```
 
 推送示例：
@@ -402,7 +402,7 @@ URI：**/v1/history/{pair}/{period}**
 
 连接示例：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/history/EOS_ETH/1m");
+var socket = new WebSocket("wss://ws.ixex.io/v1/history/EOS_ETH/1m");
 ```
 
 推送示例：  
@@ -441,7 +441,7 @@ URI：**/v1/deal/{pair}**
 
 连接示例：
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/deal/EOS_ETH");
+var socket = new WebSocket("wss://ws.ixex.io/v1/deal/EOS_ETH");
 ```
 
 推送示例：  
@@ -509,7 +509,7 @@ URI：**/v1/orderbook/{pair}/{offset}/{accuracy}/{size}**
 
 连接示例
 ``` javascript
-var socket = new WebSocket("wss://ws.ix.com/v1/orderbook/EOS_ETH/0/1/5");
+var socket = new WebSocket("wss://ws.ixex.io/v1/orderbook/EOS_ETH/0/1/5");
 ```
 
 示例：

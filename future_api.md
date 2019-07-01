@@ -107,7 +107,7 @@ from urllib import parse
 
 key = 'your key'
 secret = 'your secret'
-url = "https://api.ix.com/order/active"
+url = "https://api.ixex.io/order/active"
 symbol = 'BTC_USDT'
 nonce = int(time.time())
 payload = {'nonce': nonce, 'symbol': symbol, 'page': 1, 'size': 10}
@@ -121,7 +121,7 @@ PHP：
 ``` PHP
 $key = 'your key'
 $secret = 'your secret'
-$url = "https://api.ix.com/order/active";
+$url = "https://api.ixex.io/order/active";
 $symbol = 'BTC_USDT';
 $nonce = time();
 $payload = ['nonce' => $nonce, 'symbol' => $symbol, 'page' => 1, 'size' => 10];
@@ -135,7 +135,7 @@ JavaScript：
 ``` JavaScript
 let key = 'your key'
 let secret = 'your secret'
-let url = "https://api.ix.com/order/active"
+let url = "https://api.ixex.io/order/active"
 let symbol = 'BTC_USDT'
 let nonce = Math.floor(Date.now() / 1000)
 let sign = sha256("nonce="+ nonce + "&symbol=" + symbol + "&page=" + 1 + "&size=" + 10 + secret)
@@ -200,7 +200,7 @@ $.ajax({
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/symbol/list -d 'nonce=1536826456'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/symbol/list -d 'nonce=1536826456'
 ```
 
 ### <span id="open-apifuturelist-accountbalance">用户余额(持仓) POST /future/account/balance/list </span>
@@ -228,7 +228,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/future/account/balance/list -d 'nonce=1536826456'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/future/account/balance/list -d 'nonce=1536826456'
 ```
 
 ### <span id="open-apifuturelist-transfermargin">修改保证金 POST /future/account/transfer_margin </span>
@@ -246,7 +246,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/f
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/future/account/transfer_margin -d 'nonce=1536826456&currency=BTCUSD&amount=-0.3302'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/future/account/transfer_margin -d 'nonce=1536826456&currency=BTCUSD&amount=-0.3302'
 ```
 
 ### <span id="open-apifuturelist-order">下单 POST /contract/order </span>
@@ -269,7 +269,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/f
   -	100毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/order -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&side=1&type=1&price=3500&amount=1&leverage=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/order -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&side=1&type=1&price=3500&amount=1&leverage=10'
 ```
 
 ### <span id="open-apifuturelist-remove">撤单 POST /contract/remove</span>
@@ -286,7 +286,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	100毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/remove -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&order_id='
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/remove -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&order_id='
 ```
 
 ### <span id="open-apifuturelist-close">平仓 POST /contract/close</span>
@@ -303,7 +303,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/close -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&price=3600'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/close -d 'nonce=1536826456&symbol=FUTURE_BTCUSD&price=3600'
 ```
 
 ### <span id="open-apifuturelist-activeorders">当前委托 POST /contract/activeorders</span>
@@ -329,7 +329,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/activeorders -d 'nonce=1536826456&page=1&size=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/activeorders -d 'nonce=1536826456&page=1&size=10'
 ```
 
 ### <span id="open-apifuturelist-orderhistory">委托历史 POST /contract/orderhistory</span>
@@ -355,7 +355,7 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/contract/orderhistory -d 'nonce=1536826456&page=1&size=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/contract/orderhistory -d 'nonce=1536826456&page=1&size=10'
 ```
 
 
@@ -388,5 +388,5 @@ curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/c
   -	1000毫秒
 - 示例
 ```
-curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ix.com/future/account/orderfills -d 'nonce=1536826456&page=1&size=10'
+curl -H 'key: xxx' -H 'sign: yyy' -H 'version: 2.0' -X POST https://api.ixex.io/future/account/orderfills -d 'nonce=1536826456&page=1&size=10'
 ```
