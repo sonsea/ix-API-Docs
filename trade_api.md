@@ -47,7 +47,7 @@ $nonce = time();
 $payload = ['nonce' => $nonce, 'symbol' => $symbol, 'page' => 1, 'size' => 10];
 $payload_str = http_build_query($payload, '', '&');
 $sign = hash('sha256', urldecode($payload_str).$secret);
-$headers = ['Content-Type:application/x-www-form-urlencoded','version:2.0', 'key:'.$key, 'sign:' .$sign ];
+$headers = ['Content-Type:application/json','version:2.0', 'key:'.$key, 'sign:' .$sign ];
 $response = Requests::post($url, $headers, json_encode($payload));
 ```
 
