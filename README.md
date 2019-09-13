@@ -28,4 +28,4 @@ IX API为用户提供了一套简单而强大的开发工具，帮助用户将�
 </p>
 
 ## 联系我们
-如需帮助请添加微信号：IXOfficial00  备注：IXAPI+IX账号，拉你进API问题交流群
+如需帮助请添加微信号：IXOfficial06  备注：IXAPI+IX账号，拉你进API问题交流群
