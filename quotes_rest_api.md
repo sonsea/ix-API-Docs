@@ -821,7 +821,7 @@ URI：**/v1/orderbook/{pair}?offset={offset}&accuracy={accuracy}&size={size}**
 
 请求示例
 ``` text
-curl https://q.ixex.io/v1/orderbook/EOS_ETH?offset=0&accuracy=1&size=5
+curl https://q.ixex.io/v1/orderbook/ETH_USDT?offset=0&accuracy=1&size=5
 ```
 
 响应示例：
@@ -832,64 +832,64 @@ curl https://q.ixex.io/v1/orderbook/EOS_ETH?offset=0&accuracy=1&size=5
         "asks": [
             {
                 "values": [
-                    "0.017409", // 卖价
-                    "7.96"      // 卖量
+                    "194.12",
+                    "9.155"
                 ]
             },
             {
                 "values": [
-                    "0.017481",
-                    "40"
+                    "194.13",
+                    "17.0067"
                 ]
             },
             {
                 "values": [
-                    "0.017535",
-                    "23.39"
+                    "194.14",
+                    "1.0031"
                 ]
             },
             {
                 "values": [
-                    "0.017562",
-                    "9.84"
+                    "194.15",
+                    "2.5036"
                 ]
             },
             {
                 "values": [
-                    "0.019102",
-                    "17.74"
+                    "194.16",
+                    "50.0015"
                 ]
             }
         ],
         "bids": [
             {
                 "values": [
-                    "0.017021", // 买价
-                    "6.81"      // 买量
+                    "194.11",
+                    "1.665"
                 ]
             },
             {
                 "values": [
-                    "0.0169",
-                    "2.01"
+                    "194.1",
+                    "6.6469"
                 ]
             },
             {
                 "values": [
-                    "0.016827",
-                    "71.92"
+                    "194.09",
+                    "5.0039"
                 ]
             },
             {
                 "values": [
-                    "0.01631",
-                    "108.5"
+                    "194.03",
+                    "10.0045"
                 ]
             },
             {
                 "values": [
-                    "0.015604",
-                    "62.15"
+                    "194.02",
+                    "25.139"
                 ]
             }
         ]
